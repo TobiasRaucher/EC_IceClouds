@@ -1,0 +1,20 @@
+# Importing necessary libraries / setting up credentials:
+import os
+import earthcarekit as eck
+os.environ["MAAP_credentials"] = "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjOTVmMGU4My02YjZkLTQ2YjEtOWJjZi1kZGUzZDdiOTY3N2QifQ.eyJleHAiOjE3NzkxMTQzODksImlhdCI6MTc3MTI1MTk4OSwianRpIjoiYjZiZGM3MTMtMzI5ZC00MGE2LTkwNDYtNTA1MTcxZWZkOTYzIiwiaXNzIjoiaHR0cHM6Ly9pYW0ubWFhcC5lby5lc2EuaW50L3JlYWxtcy9lc2EtbWFhcCIsImF1ZCI6Imh0dHBzOi8vaWFtLm1hYXAuZW8uZXNhLmludC9yZWFsbXMvZXNhLW1hYXAiLCJzdWIiOiI1ZjRhNTc5Yy03MWM1LTQzMTUtODdkNS1kYTRkNjRiNjA4YTAiLCJ0eXAiOiJPZmZsaW5lIiwiYXpwIjoib2ZmbGluZS10b2tlbiIsInNpZCI6IjkzMDE2YTZhLWZkZjMtNDY4NS04NjEyLTc2YTBkYjVkOTY4MyIsInNjb3BlIjoib3BlbmlkIEVTQS1NQUFQLUZlZGVyYXRlU291cmNlcyBFU0EtTUFBUC1BdXRob3JpemF0aW9uIEVTQV9NQUFQX1N0YXRpc3RpY3MgcHJvZmlsZSBvZmZsaW5lX2FjY2VzcyBFU0EtTUFBUC1QQUxOZXh0Q2xvdWQifQ.1CYhAvJPzeJPxWso35J4Q_wWLC8NKM0keiTKE4W1t1wlGNBmbT3a1exqJprfuGUWc4GbTldRTFJ9-JjpQ_2fng"
+
+
+# Download ATL_TC__2A files for a specific range of orbit numbers:
+# eck.ecdownload(file_type = "ATL_TC__2A", start_orbit_number = 9784, end_orbit_number = 9785)
+
+# Optional: download a single specific orbit/frame for a chosen file type
+eck.ecdownload(file_type = "ATL_TC__2A", orbit_number = 8677) # frame_id = "B")
+
+# Other available file types available for download:
+# ATL_NOM_1B	ATL_DCC_1B	ATL_CSC_1B	ATL_FSC_1B	MSI_NOM_1B	MSI_BBS_1B
+# MSI_SD1_1B	MSI_SD2_1B	BBR_NOM_1B	BBR_SNG_1B	BBR_SOL_1B	BBR_LIN_1B
+# CPR_NOM_1B	MSI_RGR_1C	AUX_MET_1D	AUX_JSG_1D	ATL_FM__2A	ATL_AER_2A
+# ATL_ICE_2A.   ATL_TC__2A	ATL_EBD_2A	ATL_CTH_2A	ATL_ALD_2A	ATL_CLA_2A
+# MSI_CM__2A	MSI_COP_2A	MSI_AOT_2A	MSI_CLP_2A	CPR_FMR_2A	CPR_CD__2A
+# CPR_TC__2A	CPR_CLD_2A	CPR_APC_2A	CPR_ECO_2A	CPR_CLP_2A	AM__MO__2B
+# AM__CTH_2B	AM__ACD_2B	AC__TC__2B	AC__CLP_2B	BM__RAD_2B	BMA_FLX_2B

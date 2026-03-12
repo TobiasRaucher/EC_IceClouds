@@ -1,0 +1,15 @@
+# Raw data and large outputs — not tracked
+data/
+output/
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Misc
+*.log
